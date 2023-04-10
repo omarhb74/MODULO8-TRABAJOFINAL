@@ -1,0 +1,17 @@
+version: "1"
+
+services:
+  nexus:
+    container_name: nexus
+    image: sonatype/nexus3
+    ports:
+      - "8081:8081"
+    volumes:
+      - $PWD/nexus_data:/sonatype-work
+    networks:
+      - net
+
+
+networks:
+  net:
+  

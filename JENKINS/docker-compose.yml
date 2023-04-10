@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:latest
+    ports:
+      - "8085:8080"
+    volumes:
+      - $PWD/jenkins_data:/var/jenkins_home
+    networks:
+      - net
+
+
+networks:
+  net:
+  
